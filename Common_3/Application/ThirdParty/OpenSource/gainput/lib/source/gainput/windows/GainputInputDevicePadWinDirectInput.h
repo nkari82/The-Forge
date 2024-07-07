@@ -1486,7 +1486,7 @@ public:
 	{
 		if (!gamepadInfo.hidDevice)
 		{
-			gamepadInfo.hidDevice = CreateFile(
+			gamepadInfo.hidDevice = CreateFileA(
 				gamepadInfo.name, GENERIC_READ | GENERIC_WRITE, FILE_SHARE_READ | FILE_SHARE_WRITE, NULL, OPEN_EXISTING, 0, NULL);
 		}
 		if (gamepadInfo.hidDevice == INVALID_HANDLE_VALUE)
@@ -1522,7 +1522,7 @@ public:
 	{
 		if (!gamepadInfo.hidDevice)
 		{
-			gamepadInfo.hidDevice = CreateFile(
+			gamepadInfo.hidDevice = CreateFileA(
 				gamepadInfo.name, GENERIC_READ | GENERIC_WRITE, FILE_SHARE_READ | FILE_SHARE_WRITE, NULL, OPEN_EXISTING, 0, NULL);
 		}
 		if (gamepadInfo.hidDevice == INVALID_HANDLE_VALUE)
